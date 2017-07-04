@@ -74,7 +74,6 @@ function parseTable(){
     h = h.replace(/( )?<.+?>( )?/g, "");
 
     h = h.replace(/<\/dd>/g, ",");
-    h = h.replace(/<\/td>/g, ",");
     
     h = h.replace(/,\n/g, "\n");
     h = h.replace(/\n,/g, "\n");
