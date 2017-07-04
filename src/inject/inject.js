@@ -168,7 +168,7 @@ function injectMessageSlider(){
 function getMessageSliderElement(){
   var nav = document.getElementsByTagName("navbar")[0];
   if(!nav) {
-    nav = document.getElementsByClassName("localNav")[0];
+    nav = document.getElementsByClassName("kuiLocalNav")[0];
   }
   return nav;
 }
