@@ -180,7 +180,7 @@ function injectCSVExportButton() {
   if(navbar) {
     buttonGroup = navbar.getElementsByClassName("button-group")[0];
   } else {
-    buttonGroup = document.getElementsByClassName("localBreadcrumb")[0];
+    buttonGroup = document.getElementsByClassName("kuiLocalBreadcrumb")[0];
   }
   
   if(buttonGroup) {
