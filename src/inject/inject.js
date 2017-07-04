@@ -115,7 +115,7 @@ function createCSVButton(){
 
 function createMessageSlider(){
   var wrapperDiv = createElement('div', {"style": "padding:10px 5px; background-color:#656a76; width:100% !important;", "id":"csv-message-wrapper"});
-  var messageBox = createElement('div', {"style": "float:right; margin-top:10px; line-height:2.5em;", "id":"csv-message-box"});
+  var messageBox = createElement('div', {"style": "float:right; margin-top:10px; line-height:2.5em; color:white;", "id":"csv-message-box"});
   wrapperDiv.appendChild(messageBox);
 
   var successText = "CSV Exporter: This will export only the visible query results.";
