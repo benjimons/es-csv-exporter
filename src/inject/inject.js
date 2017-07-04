@@ -68,7 +68,8 @@ function parseTable(){
 
     //Convert the table tags to commas and white spaces
     h = h.replace(/<\/tr>/g, "\n");
-    h = h.replace(/<\/td>/g, ",");
+    h = h.replace(/<\/dd>/g, ",");
+    h = h.replace(/<\/th>/g, ",");
     h = h.replace(/<\/th>/g, ",");
     h = h.replace(/( )?<.+?>( )?/g, "");
 
