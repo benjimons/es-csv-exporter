@@ -129,14 +129,6 @@ function createMessageSlider(){
   };
   messageBox.appendChild(copyToClipboard);
 
-
-  var copyToDriveHTML = '<button aria-expanded="true" aria-label="Copy to Google Drive" style="border:1px solid #fff;margin-left: 10px;"><p style="margin: 0;font-size: 12px;font-weight:100;">Google Drive</p></button>';
-  var copyToDrive = createElement('span', {"title":"Copy to Google Drive"}, copyToDriveHTML);
-  copyToDrive.onclick = function(){
-    alert("Coming soon");
-  };
-  messageBox.appendChild(copyToDrive);
-
   var CloseHTML = '<button aria-expanded="true" aria-label="Close export slider"><p style="margin: 0;font-size: 12px;font-weight:100;">X</p></button>';
   var close = createElement('span', {"title":"Close export slider"}, CloseHTML);
   close.onclick = function(){
