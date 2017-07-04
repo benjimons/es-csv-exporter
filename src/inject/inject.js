@@ -1,7 +1,7 @@
 /*
  * Elasticsearch CSV Exporter
  * v0.1
- * https://github.com/minewhat/es-csv-exporter
+ * https://github.com/benjimons/es-csv-exporter
  * MIT licensed
  *
  * Copyright (c) 2014-2015 MineWhat,Inc
@@ -68,13 +68,11 @@ function parseTable(){
 
     //Convert the table tags to commas and white spaces
     h = h.replace(/<\/tr>/g, "\n");
-
+    h = h.replace(/<\/dd>/g, ",");
     h = h.replace(/<\/th>/g, ",");
     h = h.replace(/<\/th>/g, ",");
     h = h.replace(/( )?<.+?>( )?/g, "");
 
-    h = h.replace(/<\/dd>/g, ",");
-    
     h = h.replace(/,\n/g, "\n");
     h = h.replace(/\n,/g, "\n");
 
