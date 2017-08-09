@@ -114,7 +114,7 @@ function createCSVButton(){
 
 
 function createMessageSlider(){
-  var wrapperDiv = createElement('div', {"style": "padding:10px 5px; background-color:#656a76; width:100% !important;", "id":"csv-message-wrapper"});
+  var wrapperDiv = createElement('button', {"class": "kuiLocalMenuItem", "id":"csv-message-wrapper"});
   var messageBox = createElement('div', {"style": "float:right; margin-top:10px; line-height:2.5em; color:white;", "id":"csv-message-box"});
   wrapperDiv.appendChild(messageBox);
 
@@ -159,10 +159,7 @@ function injectMessageSlider(){
 }
 
 function getMessageSliderElement(){
-  var nav = document.getElementsByTagName("navbar")[0];
-  if(!nav) {
-    nav = document.getElementsByClassName("kuiLocalNav")[0];
-  }
+  nav = document.getElementsByClassName("kuiLocalMenu")[0];
   return nav;
 }
 
