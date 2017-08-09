@@ -103,7 +103,7 @@ function createElement(type, attributes, innerHTML){
 }
 
 function createCSVButton(){
-  var csvInnerHTML = '<button title="Export to CSV" aria-haspopup="true" aria-expanded="false"  aria-label="Export CSV"> <p style="margin: 0;font-size: 12px;font-weight: 100;">CSV</p> </button>';
+  var csvInnerHTML = '<button class="kuiLocalMenuItem"  aria-label="CSV">CSV</button>';
   var csvElemAttributes = {"tooltip":"Export CSV", "tooltip-placement":"bottom", "tooltip-popup-delay":"400", "tooltip-append-to-body":"1", "text":"Export CSV", "placement":"bottom", "append-to-body":"1", "class":"ng-scope", "id":"elastic-csv-exporter"};
   var csvButton = createElement('span', csvElemAttributes, csvInnerHTML);
   csvButton.onclick = function(){
@@ -114,7 +114,7 @@ function createCSVButton(){
 
 
 function createMessageSlider(){
-  var wrapperDiv = createElement('button', {"class": "kuiLocalMenuItem", "id":"csv-message-wrapper"});
+  var wrapperDiv = createElement('div', {"style": "padding:10px 5px; background-color:#656a76; width:100% !important;", "id":"csv-message-wrapper"});
   var messageBox = createElement('div', {"style": "float:right; margin-top:10px; line-height:2.5em; color:white;", "id":"csv-message-box"});
   wrapperDiv.appendChild(messageBox);
 
@@ -159,19 +159,17 @@ function injectMessageSlider(){
 }
 
 function getMessageSliderElement(){
-  nav = document.getElementsByClassName("kuiLocalMenu")[0];
+  var nav = document.getElementsByTagName("navbar")[0];
+  if(!nav) {
+    nav = document.getElementsByClassName("kuiLocalNav")[0];
+  }
   return nav;
 }
 
 
 function injectCSVExportButton() {
-  var navbar = document.getElementsByTagName("navbar")[0];
   var buttonGroup;
-  if(navbar) {
-    buttonGroup = navbar.getElementsByClassName("button-group")[0];
-  } else {
-    buttonGroup = document.getElementsByClassName("kuiLocalBreadcrumb")[0];
-  }
+  buttonGroup = document.getElementsByClassName("kuiLocalMenu")[0];
   
   if(buttonGroup) {
     var span = createCSVButton();
